@@ -7,14 +7,21 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "About ZPR Roofing | Licensed & Insured Roofing Company in Rockford, IL",
+  title: "About ZPR Roofing | Family-Owned Roofer in Rockford, IL",
   description:
-    "Learn about ZPR Roofing - Rockford's trusted roofing company since 2020. Licensed, insured, and committed to excellence in every project.",
+    "Family-owned roofing company based in Rockford, IL. 15+ years of hands-on roofing experience, licensed in Illinois and Wisconsin, with our own in-house crew.",
+  alternates: { canonical: "/about" },
   openGraph: {
-    title: "About ZPR Roofing | Licensed & Insured Roofing Company",
+    title: "About ZPR Roofing | Family-Owned Roofer in Rockford, IL",
     description:
-      "Family-owned roofing company serving Northern Illinois with quality craftsmanship and honest service.",
+      "Family-owned roofing company serving Northern Illinois and Southern Wisconsin with 15+ years of hands-on experience.",
+    url: "/about",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About ZPR Roofing | Family-Owned Roofer in Rockford, IL",
+    description:
+      "Family-owned roofing company serving Northern Illinois and Southern Wisconsin with 15+ years of hands-on experience.",
   },
 };
 
@@ -34,11 +41,9 @@ export default function AboutPage() {
             Building Trust, One Roof at a Time
           </h1>
           <p className="text-lg text-muted-foreground text-balance mb-8 max-w-2xl mx-auto">
-            Since 2020, our team has been providing high-quality roofing
-            services throughout Rockford and Northern Illinois. While ZPR
-            Roofing is newly established as a company, our crew brings years of
-            hands-on experience completing roofing projects as subcontractors
-            for leading contractors in the area.
+            Family-owned, based in Rockford, with 15+ years of hands-on roofing experience. We serve Northern Illinois
+            and Southern Wisconsin with our own in-house crew — the same crew that inspects your roof is the one that
+            repairs or replaces it.
           </p>
         </div>
       </section>
@@ -73,26 +78,21 @@ export default function AboutPage() {
                 </p> */}
 
                 <p>
-                  ZPR Roofing is a locally owned roofing company serving
-                  Rockford and Northern Illinois. The company was founded by an
-                  experienced roofer who spent years working as a subcontractor
-                  on residential roofing projects throughout the region. That
-                  hands-on experience is the foundation of the quality and
-                  reliability we bring to every job.
+                  ZPR Roofing is a locally owned roofing company based in Rockford, Illinois. The company was founded
+                  by an experienced roofer who spent years working on residential roofing projects throughout the
+                  region. That hands-on experience is the foundation of the quality and reliability we bring to every
+                  job.
                 </p>
 
                 <p>
-                  Our team has completed hundreds of roofing projects, including
-                  roof repairs, roof replacements, and new roof installations.
-                  From small leaks to full tear-offs, we apply the same
-                  attention to detail, strong work ethic, and professional
-                  standards on every project.
+                  Our team has completed hundreds of roofing projects — roof repairs, roof replacements, metal roofing,
+                  commercial low-slope work, and storm damage. From small leaks to full tear-offs, we apply the same
+                  attention to detail, work ethic, and professional standards on every job.
                 </p>
                 <p>
-                  Today, ZPR Roofing proudly serves homeowners in Rockford,
-                  Loves Park, Machesney Park, and surrounding Northern Illinois
-                  communities. We are committed to honest pricing, dependable
-                  service, and high-quality roofing solutions you can trust.
+                  Today, ZPR Roofing proudly serves homeowners and businesses across Northern Illinois and Southern
+                  Wisconsin — within about 60 miles of Rockford, as far north as Madison. We are committed to honest
+                  pricing, straight answers, and quality work you can trust.
                 </p>
               </div>
             </div>
@@ -170,18 +170,16 @@ export default function AboutPage() {
               Certifications & Memberships
             </h2>
             <p className="text-muted-foreground">
-              Trusted and verified by industry leaders
+              Licensed, certified, and insured in both states where we work.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              // "GAF Master Elite Contractor",
-              // "Owens Corning Preferred Contractor",
-              // "CertainTeed SELECT ShingleMaster",
-              // "Better Business Bureau A+ Rating",
-              // "NRCA Member",
-              "Illinois Licensed Contractor",
+              "Unlimited Illinois Roofing License",
+              "Wisconsin Roofing License",
+              "GAF Certified Contractor",
+              "BBB Accredited Business",
               "Workers Compensation Insured",
               "General Liability Insured",
             ].map((cert, index) => (

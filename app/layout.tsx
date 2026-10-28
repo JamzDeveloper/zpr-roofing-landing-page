@@ -13,37 +13,22 @@ const _playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zprroofing.com"),
+  metadataBase: new URL("https://www.zprroofing.com"),
   title: {
-    default: "ZPR Roofing | Professional Roofing Services in Rockford, IL",
+    default: "ZPR Roofing | Roofer in Rockford, IL & Southern Wisconsin",
     template: "%s | ZPR Roofing",
   },
   description:
-    "Professional roofing contractor offering dependable roofing solutions for homeowners. Locally owned and operated. Se habla español.",
-  keywords: [
-    "roofing Rockford IL",
-    "roof repair Rockford",
-    "roof installation",
-    "licensed roofer",
-    "storm damage repair",
-    "roof replacement",
-    "Northern Illinois roofing",
-  ],
+    "Family-owned roofing contractor serving Northern Illinois and Southern Wisconsin. Roof repair, replacement, metal, commercial and storm damage. Free estimates.",
   authors: [{ name: "ZPR Roofing" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zprroofing.com",
-    title: "ZPR Roofing | Professional Roofing Services in Rockford, IL",
-    description:
-      "Professional roofing contractor offering dependable roofing solutions for homeowners. Locally owned and operated. Se habla español.",
+    url: "https://www.zprroofing.com",
     siteName: "ZPR Roofing",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZPR Roofing | Professional Roofing Services",
-    description:
-      "Professional roofing contractor offering dependable roofing solutions for homeowners. Locally owned and operated. Se habla español.",
   },
   robots: {
     index: true,
@@ -56,7 +41,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
   icons: {
     icon: "/tab-logo.png",
     shortcut: "/tab-logo.png",
