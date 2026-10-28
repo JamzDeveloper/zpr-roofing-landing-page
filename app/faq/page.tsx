@@ -10,15 +10,25 @@ import {
 import { Phone, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Roofing FAQ | Common Questions About Roof Installation & Repair",
+  title: "Roofing FAQ | ZPR Roofing",
   description:
-    "Get answers to frequently asked questions about roofing installation, repair costs, materials, warranties, and timelines. Expert advice from ZPR Roofing.",
+    "Answers to common questions about roof installation, repair, materials, warranties, insurance claims, and our service area across Northern Illinois and Southern Wisconsin.",
+  alternates: { canonical: "/faq" },
   openGraph: {
-    title: "Roofing FAQ | Your Questions Answered",
+    title: "Roofing FAQ | ZPR Roofing",
     description:
-      "Common questions about roofing services, costs, materials, and warranties answered by experts.",
+      "Answers to common questions about roof installation, repair, materials, warranties, and our service area.",
+    url: "/faq",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing FAQ | ZPR Roofing",
+    description:
+      "Answers to common questions about roof installation, repair, materials, warranties, and our service area.",
   },
 };
 
@@ -40,12 +50,12 @@ export default function FAQPage() {
         {
           question: "Are you licensed and insured?",
           answer:
-            "Absolutely. ZPR Roofing is fully licensed, bonded, and insured in Illinois. We carry both general liability and workers' compensation insurance to protect you and our team.",
+            "Yes. ZPR Roofing holds an unlimited Illinois roofing license, which covers residential and commercial work, and a Wisconsin license for residential and commercial roofing. We carry general liability and workers' compensation insurance.",
         },
         {
           question: "What areas do you serve?",
           answer:
-            "We serve Rockford and over 50 communities throughout Northern Illinois, including Loves Park, Machesney Park, Belvidere, and surrounding Winnebago, Boone, and Ogle counties.",
+            "We serve homeowners and businesses within about 60 miles of Rockford, Illinois — covering Northern Illinois and southern Wisconsin, as far north as Madison. See our Service Areas page for the main towns we work in.",
         },
       ],
     },
@@ -152,8 +162,21 @@ export default function FAQPage() {
     },
   ];
 
+  const allFaqs = faqCategories.flatMap((cat) =>
+    cat.questions.map((q) => ({ q: q.question, a: q.answer })),
+  );
+
   return (
     <main className="min-h-screen">
+      <JsonLd
+        data={[
+          breadcrumbSchema([
+            { name: "Home", href: "/" },
+            { name: "FAQ", href: "/faq" },
+          ]),
+          faqSchema(allFaqs),
+        ]}
+      />
       <Header />
 
       {/* Hero Section */}

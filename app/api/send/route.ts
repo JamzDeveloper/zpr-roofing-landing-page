@@ -1,26 +1,26 @@
 import { EmailTemplate } from "@/components/EmailTemplate";
 import { Resend } from "resend";
 
-if (!process.env.RESEND_API_KEY || !process.env.RESEND_EMAIL_TO) {
-  throw new Error("RESEND_API_KEY is not configured in environment variables");
-}
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY || !process.env.RESEND_EMAIL_TO) {
+    return Response.json(
+      { error: "Email service is not configured. Please contact us by phone at (815) 904-9777." },
+      { status: 500 },
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
-    // Parse the request body
     const body = await request.json();
     const { fullName, email, phone, project } = body;
 
-    // Validate required fields
     if (!fullName || !email || !project) {
       return Response.json(
         {
-          error:
-            "Missing required fields: fullName, email, and project are required",
+          error: "Missing required fields: fullName, email, and project are required",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 

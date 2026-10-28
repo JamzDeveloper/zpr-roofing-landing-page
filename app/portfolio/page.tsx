@@ -7,14 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Our Roofing Projects & Completed Work | ZPR Roofing Portfolio",
+  title: "Portfolio | Completed Roofing Projects | ZPR Roofing",
   description:
-    "View our portfolio of completed roofing projects in Rockford, IL. Quality craftsmanship on residential and commercial roofs.",
+    "Real roofing projects completed by our in-house crew across Northern Illinois and Southern Wisconsin — shingle replacements, specialty shingles, low-slope, and partial repairs.",
+  alternates: { canonical: "/portfolio" },
   openGraph: {
-    title: "Roofing Portfolio | ZPR Roofing",
+    title: "Portfolio | Completed Roofing Projects | ZPR Roofing",
     description:
-      "Browse our gallery of completed roofing projects and see our quality work.",
+      "Real roofing projects completed by our in-house crew across Northern Illinois and Southern Wisconsin.",
+    url: "/portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio | Completed Roofing Projects | ZPR Roofing",
+    description:
+      "Real roofing projects completed by our in-house crew across Northern Illinois and Southern Wisconsin.",
   },
 };
 
@@ -33,9 +40,9 @@ export default function PortfolioPage() {
             Our Roofing Projects & Completed Work
           </h1>
           <p className="text-lg text-muted-foreground text-balance mb-8 max-w-2xl mx-auto">
-            Explore our gallery of completed roofing projects throughout Rockford and Northern Illinois. 
-            From residential roof replacements to commercial installations, see the quality craftsmanship 
-            that has earned us the trust of hundreds of homeowners and businesses.
+            Real roofing projects completed by our in-house crew across Northern Illinois and Southern Wisconsin.
+            Shingle replacements, specialty shingles, low-slope installations, and partial repairs — every photo is a
+            job we did.
           </p>
         </div>
       </section>
