@@ -5,7 +5,6 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { DontSeeYourTown } from "@/components/dont-see-your-town";
 import { JsonLd } from "@/components/json-ld";
 import { GoogleMapEmbed } from "@/components/google-map-embed";
-import { GoogleReviews } from "@/components/google-reviews";
 import {
   Accordion,
   AccordionContent,
@@ -306,11 +305,6 @@ export default async function CityPage({
           </div>
         </section>
       )}
-
-      <GoogleReviews
-        heading={`Reviews from homeowners near ${city.name}`}
-        subhead="Live Google reviews from across our Northern Illinois and Southern Wisconsin service area."
-      />
 
       <DontSeeYourTown />
 
